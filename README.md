@@ -6,3 +6,5 @@ A couple of algorithm exercises to level up with. Sourced from different sites/t
 3. __Error Digit Range__: find the difference between the possible maximum and minimum reconstructions of a number entered into a system that misinterprets any of its digits. 
 4. __Natural Number Summation__: find the number of possible consecutive number summations that add up to a given number N. 
 5. __Most Free Time__: calculate the most free time between events in a given day.
+6. __Minimum Cost Problem__: find the total minimum cost incurred by students buying pencils. 
+7. __Maximum Reach__: In a given set of buildings, take turns counting the number of moves it takes to jump to the next highest building starting with the 1st building in the 1st iteration till all the buildings are done. 
