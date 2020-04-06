@@ -3,19 +3,17 @@ function minCost(c, N){
         return "Ensure to input the pencil costs for each student";
     }
     let totalMinCost = 0;
-    let minCostList= [];
     let tempIndex = 0;
 
     let minCost = Math.min(...c[0]);
     let minIndex = c[0].indexOf(minCost);
-    minCostList.push(minCost)
+    totalMinCost = minCost;
 
     for(let i =1; i<N; i++){  
         minCost = Math.min(...c[i]);
         tempIndex = c[i].indexOf(minCost);
-        
         if (tempIndex !== minIndex){
-            minCostList.push(minCost);
+            totalMinCost += minCost;
             minIndex = tempIndex;
         } else if (tempIndex === minIndex){
             if(tempIndex ===0){
@@ -42,14 +40,11 @@ function minCost(c, N){
                     minCost = c[i][1];
                     minIndex = 1;
                 }
-            }    
-            minCostList.push(minCost);
+            }
+            totalMinCost += minCost;
         }
-        // console.log(`at ${i}>>>>> temp>>>>>: ${tempIndex}, minIndex: ${minIndex}, minCost: ${minCost}`)
     }
-    console.log(minCostList)
-     totalMinCost = minCostList.reduce((total, num)=> total+num)
-     return totalMinCost;
+    return totalMinCost;
 }
 
 let arr = [[2,1,1], [3,2,2], [1,2,2], [1,2,2]]
